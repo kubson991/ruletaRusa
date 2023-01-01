@@ -1,0 +1,94 @@
+.ruleta{
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  position: relative;
+}
+
+.ruleta::after{
+  content: " ";
+  display: block;
+  background-color: red;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  clip-path: polygon(50% 100%, 0 0, 100% 0);
+}
+
+.ruleta img{
+  height: 350px;
+  width: 350px;
+}
+
+.show{
+  width: 1750px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  height: 350px;
+  border-radius: 5px;
+}
+
+
+
+.imgContainer{
+  width: 300px;
+  display: flex;
+  flex-direction: row;
+  animation-name: example;
+  animation-duration: 0.4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  min-width: fit-content;
+
+}
+
+@keyframes example {
+  from {transform: translateX(0);}
+  to {
+    transform: translateX(calc(100% - 1750px))
+  }
+}
+
+.animationStopped{
+  animation-play-state: paused;
+}
+
+.uploadGif{
+  width: 250px;
+  height: 180px;
+  cursor: pointer;
+  margin: auto;
+}
+#inputUpload{
+  visibility: hidden;
+}
+
+.inputContainer{
+  display: flex;
+  justify-content: center;
+}
+
+.buttonContainer{
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+button{
+  margin: auto;
+}
+
+span{
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 50px;
+  cursor: pointer;
+  padding: 10px;
+}
